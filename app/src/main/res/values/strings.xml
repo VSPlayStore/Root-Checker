@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Root Checker</string>
+    <string name="icon">Icon</string>
+    <string name="android_version">Android Version :</string>
+    <string name="device">Device :</string>
+    <string name="verify">Verify</string>
+    <string name="verify_root_status">Verify Root Status</string>
+</resources>
