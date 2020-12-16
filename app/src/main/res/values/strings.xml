@@ -5,4 +5,7 @@
     <string name="device">Device :</string>
     <string name="verify">Verify</string>
     <string name="verify_root_status">Verify Root Status</string>
+    <string name="cts">CTS :</string>
+    <string name="basic_integrity">Basic Integrity :</string>
+    <string name="verify_safetynet_status">Verify SafetyNet Status</string>
 </resources>
