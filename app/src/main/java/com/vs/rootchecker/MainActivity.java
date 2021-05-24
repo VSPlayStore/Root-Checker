@@ -14,6 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.safetynet.SafetyNet;
+import com.mopub.common.MoPub;
+import com.mopub.common.SdkConfiguration;
+import com.mopub.common.SdkInitializationListener;
+import com.mopub.mobileads.MoPubView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,14 +29,25 @@ import java.util.Random;
 
 import eu.chainfire.libsuperuser.Shell;
 
+import static com.mopub.common.logging.MoPubLog.LogLevel.INFO;
+
 public class MainActivity extends AppCompatActivity {
 
     private final Random mRandom = new SecureRandom();
+    MoPubView moPubView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        moPubView = findViewById(R.id.adview);
+        String adID = "";
+        moPubView.setAdUnitId(adID);
+        final SdkConfiguration.Builder configBuilder = new SdkConfiguration.Builder(adID);
+
+        configBuilder.withLogLevel(INFO);
+        MoPub.initializeSdk(this, configBuilder.build(), initSdkListener());
 
         Button verify_root = findViewById(R.id.verify_root);
         Button verify_safety_net = findViewById(R.id.verify_safety_net);
@@ -76,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                                     String pass = "Pass";
                                     String fail = "Fail";
                                     JSONObject obj = new JSONObject(decodeJws(response.getJwsResult()));
-                                    if (Boolean.parseBoolean(obj.get("ctsProfileMatch").toString())){
+                                    if (Boolean.parseBoolean(obj.get("ctsProfileMatch").toString())) {
                                         cts.setText(pass);
                                         cts.setTextColor(Color.parseColor("#00FF00"));
                                     } else {
@@ -84,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                                         cts.setTextColor(Color.parseColor("#FF0000"));
                                     }
 
-                                    if (Boolean.parseBoolean(obj.get("basicIntegrity").toString())){
+                                    if (Boolean.parseBoolean(obj.get("basicIntegrity").toString())) {
                                         basic_int.setText(pass);
                                         basic_int.setTextColor(Color.parseColor("#00FF00"));
                                     } else {
@@ -106,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         });
+    }
+
+    private SdkInitializationListener initSdkListener() {
+        return () -> moPubView.loadAd();
     }
 
     public String decodeJws(String jwsResult) {
