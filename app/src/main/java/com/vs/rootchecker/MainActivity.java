@@ -12,12 +12,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.safetynet.SafetyNet;
-import com.mopub.common.MoPub;
-import com.mopub.common.SdkConfiguration;
-import com.mopub.common.SdkInitializationListener;
-import com.mopub.mobileads.MoPubView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,25 +28,21 @@ import java.util.Random;
 
 import eu.chainfire.libsuperuser.Shell;
 
-import static com.mopub.common.logging.MoPubLog.LogLevel.INFO;
-
 public class MainActivity extends AppCompatActivity {
 
     private final Random mRandom = new SecureRandom();
-    MoPubView moPubView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        moPubView = findViewById(R.id.adview);
-        String adID = "";
-        moPubView.setAdUnitId(adID);
-        final SdkConfiguration.Builder configBuilder = new SdkConfiguration.Builder(adID);
+        MobileAds.initialize(this, initializationStatus -> {
+        });
 
-        configBuilder.withLogLevel(INFO);
-        MoPub.initializeSdk(this, configBuilder.build(), initSdkListener());
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Button verify_root = findViewById(R.id.verify_root);
         Button verify_safety_net = findViewById(R.id.verify_safety_net);
@@ -78,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String API_KEY = "";
+        String API_KEY = "AIzaSyAZXkw0rNIrz0wTgQ060ut_6GiAsVKgKkM";
         String nonceData = "Safety Net Sample: " + System.currentTimeMillis();
         byte[] nonce = getRequestNonce(nonceData);
 
@@ -121,10 +116,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         });
-    }
-
-    private SdkInitializationListener initSdkListener() {
-        return () -> moPubView.loadAd();
     }
 
     public String decodeJws(String jwsResult) {
