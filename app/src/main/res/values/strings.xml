@@ -8,4 +8,8 @@
     <string name="cts">CTS :</string>
     <string name="basic_integrity">Basic Integrity :</string>
     <string name="verify_safetynet_status">Verify SafetyNet Status</string>
+    <string name="verify_play_integrity_status">Verify Play Integrity Status</string>
+    <string name="meets_basic_integrity">Basic Integrity :</string>
+    <string name="meets_device_integrity">Device Integrity :</string>
+    <string name="meets_strong_integrity">Strong Integrity :</string>
 </resources>
