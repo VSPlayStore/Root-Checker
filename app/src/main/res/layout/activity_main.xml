@@ -80,6 +80,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/safety_net_status_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"
@@ -182,6 +183,134 @@
             app:layout_constraintEnd_toStartOf="@+id/verify_safety_net"
             app:layout_constraintStart_toEndOf="@+id/imageView_safety_net"
             app:layout_constraintTop_toBottomOf="@+id/basic_int_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/safety_net_status_layout">
+
+        <ImageView
+            android:id="@+id/imageView_play_integrity"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/icon"
+            android:padding="10dp"
+            android:src="@drawable/play_integrity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/play_integrity_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/verify_play_integrity_status"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView_play_integrity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/meets_basic_integrity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text="@string/meets_basic_integrity"
+            app:layout_constraintStart_toEndOf="@+id/imageView_play_integrity"
+            app:layout_constraintTop_toBottomOf="@+id/play_integrity_status" />
+
+        <TextView
+            android:id="@+id/meets_basic_integrity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text=""
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/meets_basic_integrity_text"
+            app:layout_constraintTop_toBottomOf="@+id/play_integrity_status" />
+
+        <TextView
+            android:id="@+id/meets_device_integrity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="@string/meets_device_integrity"
+            app:layout_constraintStart_toEndOf="@+id/imageView_play_integrity"
+            app:layout_constraintTop_toBottomOf="@+id/meets_basic_integrity_text" />
+
+        <TextView
+            android:id="@+id/meets_device_integrity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text=""
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/meets_device_integrity_text"
+            app:layout_constraintTop_toBottomOf="@+id/meets_basic_integrity_text" />
+
+        <TextView
+            android:id="@+id/meets_strong_integrity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="@string/meets_strong_integrity"
+            app:layout_constraintStart_toEndOf="@+id/imageView_play_integrity"
+            app:layout_constraintTop_toBottomOf="@+id/meets_device_integrity_text" />
+
+        <TextView
+            android:id="@+id/meets_strong_integrity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text=""
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/meets_strong_integrity_text"
+            app:layout_constraintTop_toBottomOf="@+id/meets_device_integrity" />
+
+        <Button
+            android:id="@+id/verify_play_integrity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/verify"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/play_integrity_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@android:color/holo_orange_dark"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/verify_play_integrity"
+            app:layout_constraintStart_toEndOf="@+id/imageView_play_integrity"
+            app:layout_constraintTop_toBottomOf="@+id/meets_strong_integrity_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
