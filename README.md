@@ -12,7 +12,7 @@
     <a href="https://github.com/VsTechDev/Root-Checker"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://play.google.com/store/apps/details?id=com.vs.rootchecker">Download</a>
+    <a href="https://play.google.com/store/apps/details?id=com.vineelsai.rootchecker">Download</a>
     ·
     <a href="https://github.com/VsTechDev/Root-Checker/issues">Report Bug</a>
     ·
@@ -36,7 +36,7 @@
   <a herf="https://github.com/VsTechDev/Root-Checker/blob/master/LICENSE.txt">
     <img src="https://img.shields.io/github/license/VsTechDev/Root-Checker" />
   </a>
-  <a herf="https://play.google.com/store/apps/details?id=com.vs.rootchecker">
+  <a herf="https://play.google.com/store/apps/details?id=com.vineelsai.rootchecker">
     <img src="https://img.shields.io/endpoint?color=blue&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dcom.vs.rootchecker%26l%3DPlay%2520Store%26m%3D%24installs" />
   </a>
 </p>

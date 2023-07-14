@@ -1,4 +1,4 @@
-package com.vs.rootchecker;
+package com.vineelsai.rootchecker;
 
 import static org.junit.Assert.assertEquals;
 

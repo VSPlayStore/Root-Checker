@@ -79,112 +79,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/safety_net_status_layout"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="10dp"
-        android:background="@android:color/white"
-        android:elevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <ImageView
-            android:id="@+id/imageView_safety_net"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/icon"
-            android:padding="10dp"
-            android:src="@drawable/safety_net"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/safety_net_status"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:text="@string/verify_safetynet_status"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView_safety_net"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/cts_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:padding="5dp"
-            android:text="@string/cts"
-            app:layout_constraintStart_toEndOf="@+id/imageView_safety_net"
-            app:layout_constraintTop_toBottomOf="@+id/safety_net_status" />
-
-        <TextView
-            android:id="@+id/cts"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:padding="5dp"
-            android:text=""
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cts_text"
-            app:layout_constraintTop_toBottomOf="@+id/safety_net_status" />
-
-        <TextView
-            android:id="@+id/basic_int_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:padding="5dp"
-            android:text="@string/basic_integrity"
-            app:layout_constraintStart_toEndOf="@+id/imageView_safety_net"
-            app:layout_constraintTop_toBottomOf="@+id/cts" />
-
-        <TextView
-            android:id="@+id/basic_int"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:padding="5dp"
-            android:text=""
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/basic_int_text"
-            app:layout_constraintTop_toBottomOf="@+id/cts" />
-
-        <Button
-            android:id="@+id/verify_safety_net"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/verify"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@android:color/holo_orange_dark"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/verify_safety_net"
-            app:layout_constraintStart_toEndOf="@+id/imageView_safety_net"
-            app:layout_constraintTop_toBottomOf="@+id/basic_int_text" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -194,7 +88,7 @@
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/safety_net_status_layout">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <ImageView
             android:id="@+id/imageView_play_integrity"
@@ -313,17 +207,5 @@
             app:layout_constraintTop_toBottomOf="@+id/meets_strong_integrity_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-1389292252312215/8673501983"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
