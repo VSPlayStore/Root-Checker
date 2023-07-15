@@ -1,43 +1,40 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/VsTechDev/Root-Checker">
-    <img src="https://raw.githubusercontent.com/VsTechDev/Root-Checker/master/app/src/main/res/drawable/root.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/VSPlayStore/Root-Checker">
+    <img src="https://raw.githubusercontent.com/VSPlayStore/Root-Checker/master/app/src/main/res/drawable/root.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">	Root & SafetyNet Checker</h3>
+  <h3 align="center"> Root Checker</h3>
 
   <p align="center">
-    Root Checker app to find the Root & SafetyNet status of your phone
+    Root Checker app to find the Root status of your phone
     <br />
-    <a href="https://github.com/VsTechDev/Root-Checker"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/VSPlayStore/Root-Checker"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://play.google.com/store/apps/details?id=com.vineelsai.rootchecker">Download</a>
     ·
-    <a href="https://github.com/VsTechDev/Root-Checker/issues">Report Bug</a>
+    <a href="https://github.com/VSPlayStore/Root-Checker/issues">Report Bug</a>
     ·
-    <a href="https://github.com/VsTechDev/Root-Checker/issues">Request Feature</a>
+    <a href="https://github.com/VSPlayStore/Root-Checker/issues">Request Feature</a>
   </p>
 </div>
 
 <p align="center">
-  <a herf="https://github.com/VsTechDev/Root-Checker/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/VsTechDev/Root-Checker" />
+  <a herf="https://github.com/VSPlayStore/Root-Checker/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/VSPlayStore/Root-Checker" />
   </a>
-  <a herf="https://github.com/VsTechDev/Root-Checker/network/members">
-    <img src="https://img.shields.io/github/forks/VsTechDev/Root-Checker" />
+  <a herf="https://github.com/VSPlayStore/Root-Checker/network/members">
+    <img src="https://img.shields.io/github/forks/VSPlayStore/Root-Checker" />
   </a>
-  <a herf="https://github.com/VsTechDev/Root-Checker/stargazers">
-    <img src="https://img.shields.io/github/stars/VsTechDev/Root-Checker" />
+  <a herf="https://github.com/VSPlayStore/Root-Checker/stargazers">
+    <img src="https://img.shields.io/github/stars/VSPlayStore/Root-Checker" />
   </a>
-  <a herf="https://github.com/VsTechDev/Root-Checker/issues">
-    <img src="https://img.shields.io/github/issues/VsTechDev/Root-Checker" />
+  <a herf="https://github.com/VSPlayStore/Root-Checker/issues">
+    <img src="https://img.shields.io/github/issues/VSPlayStore/Root-Checker" />
   </a>
-  <a herf="https://github.com/VsTechDev/Root-Checker/blob/master/LICENSE.txt">
-    <img src="https://img.shields.io/github/license/VsTechDev/Root-Checker" />
-  </a>
-  <a herf="https://play.google.com/store/apps/details?id=com.vineelsai.rootchecker">
-    <img src="https://img.shields.io/endpoint?color=blue&url=https%3A%2F%2Fplayshields.herokuapp.com%2Fplay%3Fi%3Dcom.vs.rootchecker%26l%3DPlay%2520Store%26m%3D%24installs" />
+  <a herf="https://github.com/VSPlayStore/Root-Checker/blob/master/LICENSE.txt">
+    <img src="https://img.shields.io/github/license/VSPlayStore/Root-Checker" />
   </a>
 </p>
 
@@ -88,6 +85,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 * Twitter - [@vineelsai26](https://twitter.com/vineelsai26)
 
-* Email - mail@vineelsai.com
+* Email - <mail@vineelsai.com>
 
 * Website - [vineelsai.com](https://vineelsai.com)
