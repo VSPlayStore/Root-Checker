@@ -13,6 +13,8 @@
     <br />
     <br />
     <a href="https://play.google.com/store/apps/details?id=com.vineelsai.rootchecker">Download</a>
+    .
+    <a href="https://repo.vineelsai.com/fdroid/repo">F-Droid Download</a>
     ·
     <a href="https://github.com/VSPlayStore/Root-Checker/issues">Report Bug</a>
     ·
