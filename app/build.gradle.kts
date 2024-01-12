@@ -12,14 +12,14 @@ for (i in envFile) {
 
 android {
     compileSdk = 34
-    buildToolsVersion = "33.0.2"
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.vineelsai.rootchecker"
         minSdk = 29
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         env["DECRYPTION_KEY"]?.let { resValue("string", "DECRYPTION_KEY", it) }
@@ -30,7 +30,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+//            isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
         getByName("debug") {
@@ -61,20 +61,15 @@ android {
 dependencies {
     // UI
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    // Firebase
-    implementation("com.google.firebase:firebase-bom:32.2.0")
-    implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
 
     // 3rd Party
     implementation("eu.chainfire:libsuperuser:1.1.0")
     implementation(group="org.bitbucket.b_c", name="jose4j", version="0.7.12")
 
     // Google
-    implementation("com.google.android.gms:play-services-safetynet:18.0.1")
-    implementation("com.google.android.play:integrity:1.1.0")
+    implementation("com.google.android.play:integrity:1.3.0")
 
     // Test
     testImplementation("junit:junit:4.13.2")
