@@ -11,15 +11,15 @@ for (i in envFile) {
 }
 
 android {
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "com.vineelsai.rootchecker"
         minSdk = 29
-        targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1"
+        targetSdk = 35
+        versionCode = 3
+        versionName = "1.0.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         env["DECRYPTION_KEY"]?.let { resValue("string", "DECRYPTION_KEY", it) }
@@ -60,8 +60,8 @@ android {
 
 dependencies {
     // UI
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     // 3rd Party
@@ -69,11 +69,11 @@ dependencies {
     implementation(group="org.bitbucket.b_c", name="jose4j", version="0.7.12")
 
     // Google
-    implementation("com.google.android.play:integrity:1.3.0")
+    implementation("com.google.android.play:integrity:1.4.0")
 
     // Test
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }
 

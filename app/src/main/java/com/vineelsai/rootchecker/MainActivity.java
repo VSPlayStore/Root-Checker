@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                                             .fromCompactSerialization(integrityToken);
 
                                 } catch (Exception e) {
-                                    e.printStackTrace();
+                                    Log.e("Error", e.getMessage());
                                 }
 
                                 if (jwe == null) {
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     }
                                 } catch (JSONException e) {
-                                    e.printStackTrace();
+                                    Log.e("Error", e.getMessage());
                                 }
                                 play_integrity_progress.setVisibility(View.INVISIBLE);
                             })
