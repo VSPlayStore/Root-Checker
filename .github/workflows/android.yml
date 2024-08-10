@@ -19,11 +19,10 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
-    - name: Create file
+    - name: Create .env file
       run: |
         echo DECRYPTION_KEY=${{ secrets.DECRYPTION_KEY }} > .env
         echo VERIFICATION_KEY=${{ secrets.VERIFICATION_KEY }} >> .env
-        echo ${{ secrets.GOOGLE_SERVICES_JSON }} | base64 -d > app/google-services.json
 
     - name: Build with Gradle
       run: chmod +x gradlew && ./gradlew assembleDebug --stacktrace
